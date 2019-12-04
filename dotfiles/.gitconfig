@@ -1,0 +1,5 @@
+[user]
+	email = cwerth@crimson.ua.edu
+	name = Caleb Werth
+[core]
+	excludesfile = /home/cwerth/.gitignore_global
