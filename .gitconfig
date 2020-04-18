@@ -3,3 +3,4 @@
 	name = Caleb Werth
 [core]
 	excludesfile = /home/cwerth/.gitignore_global
+	pager = less -F -X -R

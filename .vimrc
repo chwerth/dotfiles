@@ -7,20 +7,16 @@ endif
 call plug#begin("~/.vim/plugged")
 
 Plug 'tpope/vim-commentary'
-Plug 'leafgarland/typescript-vim'
+Plug 'nestorsalceda/vim-strip-trailing-whitespaces'
 Plug 'Shougo/vimproc.vim', {'do' : 'make'}
-Plug 'Quramy/tsuquyomi'
-" Plug 'ajh17/VimCompletesMe'
-Plug 'nathanaelkane/vim-indent-guides'
 Plug 'scrooloose/nerdtree'
 Plug 'dense-analysis/ale'
-Plug 'nestorsalceda/vim-strip-trailing-whitespaces'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-rhubarb'
 Plug 'vim-airline/vim-airline'
 Plug 'airblade/vim-gitgutter'
-Plug 'derekwyatt/vim-scala'
 Plug 'martinda/Jenkinsfile-vim-syntax'
+" Deoplete
 if has('nvim')
   Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 else
@@ -28,10 +24,16 @@ else
   Plug 'roxma/nvim-yarp'
   Plug 'roxma/vim-hug-neovim-rpc'
 endif
-let g:deoplete#enable_at_startup = 1
+Plug 'zchee/deoplete-jedi'
+Plug 'deoplete-plugins/deoplete-tag'
+Plug 'deoplete-plugins/deoplete-docker'
 
 call plug#end()
 
+" Enable at startup options
+let g:deoplete#enable_at_startup = 1
+
+" Colorscheme and miscellaneous options
 colorscheme elflord
 set expandtab
 set autoindent
@@ -41,7 +43,9 @@ set smartindent
 set number
 set relativenumber
 set mouse=a
-
-map <C-o> :NERDTreeToggle<CR>
-set tags=./tags,tags;$HOME
 set backspace=indent,eol,start
+set tags=./tags,tags;$HOME
+
+" Mapping
+map <C-o> :NERDTreeToggle<CR>
+inoremap <expr><tab> pumvisible() ? "\<c-n>" : "\<tab>"
