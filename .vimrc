@@ -8,6 +8,7 @@ call plug#begin("~/.vim/plugged")
 
 Plug 'tpope/vim-commentary'
 Plug 'nestorsalceda/vim-strip-trailing-whitespaces'
+Plug 'jiangmiao/auto-pairs'
 Plug 'Shougo/vimproc.vim', {'do' : 'make'}
 Plug 'scrooloose/nerdtree'
 Plug 'dense-analysis/ale'
@@ -27,8 +28,21 @@ endif
 Plug 'zchee/deoplete-jedi'
 Plug 'deoplete-plugins/deoplete-tag'
 Plug 'deoplete-plugins/deoplete-docker'
+Plug 'deoplete-plugins/deoplete-dictionary'
 
 call plug#end()
+
+setlocal dictionary+=/usr/share/dict/words
+setlocal dictionary+=/usr/share/dict/american-english
+" Remove this if you'd like to use fuzzy search
+call deoplete#custom#source(
+\ 'dictionary', 'matchers', ['matcher_head'])
+" If dictionary is already sorted, no need to sort it again.
+call deoplete#custom#source(
+\ 'dictionary', 'sorters', [])
+" Do not complete too short words
+call deoplete#custom#source(
+\ 'dictionary', 'min_pattern_length', 4)
 
 " Enable at startup options
 let g:deoplete#enable_at_startup = 1
