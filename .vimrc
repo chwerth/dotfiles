@@ -19,36 +19,37 @@ Plug 'vim-airline/vim-airline'
 Plug 'pechorin/any-jump.vim'
 Plug 'martinda/Jenkinsfile-vim-syntax'
 Plug 'drewtempelmeyer/palenight.vim'
+Plug 'ajh17/VimCompletesMe'
 " Deoplete
-if has('nvim')
-  Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-else
-  Plug 'Shougo/deoplete.nvim'
-  Plug 'roxma/nvim-yarp'
-  Plug 'roxma/vim-hug-neovim-rpc'
-endif
-Plug 'zchee/deoplete-jedi'
-Plug 'deoplete-plugins/deoplete-tag'
-Plug 'deoplete-plugins/deoplete-docker'
-Plug 'deoplete-plugins/deoplete-dictionary'
+" if has('nvim')
+"   Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+" else
+"   Plug 'Shougo/deoplete.nvim'
+"   Plug 'roxma/nvim-yarp'
+"   Plug 'roxma/vim-hug-neovim-rpc'
+" endif
+" Plug 'zchee/deoplete-jedi'
+" Plug 'deoplete-plugins/deoplete-tag'
+" Plug 'deoplete-plugins/deoplete-docker'
+" Plug 'deoplete-plugins/deoplete-dictionary'
 
 call plug#end()
 
 " Enable deoplete
-let g:deoplete#enable_at_startup = 1
+" let g:deoplete#enable_at_startup = 1
 
-" Give deoplete the dictionary
-setlocal dictionary+=/usr/share/dict/words
-setlocal dictionary+=/usr/share/dict/american-english
-" Remove this if you'd like to use fuzzy search
-call deoplete#custom#source(
-\ 'dictionary', 'matchers', ['matcher_head'])
-" If dictionary is already sorted, no need to sort it again.
-call deoplete#custom#source(
-\ 'dictionary', 'sorters', [])
-" Do not complete too short words
-call deoplete#custom#source(
-\ 'dictionary', 'min_pattern_length', 4)
+" " Give deoplete the dictionary
+" setlocal dictionary+=/usr/share/dict/words
+" setlocal dictionary+=/usr/share/dict/american-english
+" " Remove this if you'd like to use fuzzy search
+" call deoplete#custom#source(
+" \ 'dictionary', 'matchers', ['matcher_head'])
+" " If dictionary is already sorted, no need to sort it again.
+" call deoplete#custom#source(
+" \ 'dictionary', 'sorters', [])
+" " Do not complete too short words
+" call deoplete#custom#source(
+" \ 'dictionary', 'min_pattern_length', 4)
 
 " Any Jump Settings
 let g:any_jump_list_numbers = 1
