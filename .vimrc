@@ -14,8 +14,9 @@ Plug 'scrooloose/nerdtree'
 Plug 'dense-analysis/ale'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-rhubarb'
-Plug 'vim-airline/vim-airline'
 Plug 'airblade/vim-gitgutter'
+Plug 'vim-airline/vim-airline'
+Plug 'pechorin/any-jump.vim'
 Plug 'martinda/Jenkinsfile-vim-syntax'
 " Deoplete
 if has('nvim')
