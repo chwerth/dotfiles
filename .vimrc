@@ -52,9 +52,12 @@ set smartindent
 " Line Numbers
 set number
 set relativenumber
+
+" Misc, idk
 set mouse=a
 set backspace=indent,eol,start
 set tags=./tags,tags;$HOME
 
 " Mapping
 map <C-o> :NERDTreeToggle<CR>
+map <C-x> :packadd termdebug<CR>:Termdebug<CR><C-w>b<C-w>L<C-w>hi
