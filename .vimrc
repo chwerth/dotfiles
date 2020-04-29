@@ -60,4 +60,5 @@ set tags=./tags,tags;$HOME
 
 " Mapping
 map <C-o> :NERDTreeToggle<CR>
+map <Leader>o :Gbrowse<CR>
 map <C-x> :packadd termdebug<CR>:Termdebug<CR><C-w>b<C-w>L<C-w>hi
