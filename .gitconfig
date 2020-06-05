@@ -1,7 +1,7 @@
 [user]
-	email = cwerth@crimson.ua.edu
-	name = Caleb Werth
+    email = cwerth@crimson.ua.edu
+    name = Caleb Werth
 [core]
-	excludesfile = /home/cwerth/.gitignore_global
-  pager = less -F -X -R
-  editor = vim
+    excludesfile = /home/cwerth/.gitignore_global
+    pager = less -F -X -R
+    editor = vim
