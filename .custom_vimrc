@@ -20,8 +20,13 @@ Plug 'pechorin/any-jump.vim'
 Plug 'martinda/Jenkinsfile-vim-syntax'
 Plug 'drewtempelmeyer/palenight.vim'
 Plug 'ajh17/VimCompletesMe'
+Plug 'vim-latex/vim-latex'
 
 call plug#end()
+
+" Vim LaTeX Settings
+let g:tex_flavor='latex'
+let g:Tex_DefaultTargetFormat = 'pdf'
 
 " Any Jump Settings
 let g:any_jump_list_numbers = 1
